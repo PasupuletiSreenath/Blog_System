@@ -1,0 +1,93 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Give the whole page a soft background color */
+body {
+    background: linear-gradient(135deg, #e0f2fe, #f0fdf4);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Main card that holds all the content */
+.container {
+    background: #ffffff;
+    max-width: 600px;
+    width: 100%;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Main heading */
+h1 {
+    color: #1e3a8a;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+/* Sub heading */
+h2 {
+    color: #16a34a;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+/* Info box with task confirmation details */
+.info-box {
+    background: #f9fafb;
+    border-left: 4px solid #1e3a8a;
+    text-align: left;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+}
+
+.info-box p {
+    margin-bottom: 8px;
+    color: #374151;
+}
+
+.info-box ul {
+    margin-left: 20px;
+    color: #374151;
+}
+
+.info-box li {
+    margin-bottom: 5px;
+}
+
+/* Box that displays the current date & time */
+.datetime-box {
+    background: #eff6ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.datetime-box p {
+    color: #1e40af;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.datetime-box h3 {
+    color: #1e3a8a;
+    font-size: 20px;
+}
+
+/* Footer text */
+footer {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #9ca3af;
+}
