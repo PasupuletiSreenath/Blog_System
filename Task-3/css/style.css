@@ -1,0 +1,28 @@
+/* ===== Task 3 - Extra styling on top of Bootstrap 5 ===== */
+
+body {
+    background: #f4f6f9;
+}
+
+mark {
+    background: #fff3cd;
+    padding: 0 2px;
+    border-radius: 3px;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.pagination .page-link {
+    color: #2c3e50;
+}
+
+.pagination .active .page-link {
+    background-color: #2c3e50;
+    border-color: #2c3e50;
+}

@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #4f46e5; /* Indigo */
+    --primary-hover: #4338ca;
+    --secondary: #3b82f6; /* Blue */
+    --success: #10b981;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --dark: #0f172a;
+    --light: #f8fafc;
+    --white: #ffffff;
+    --gray: #64748b;
+    --border: rgba(0, 0, 0, 0.08);
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --radius: 20px;
+    --sidebar-width: 260px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #eef2ff 0%, #eff6ff 100%);
+    color: var(--dark);
+    overflow-x: hidden;
+}
+
+/* ================= Sidebar Layout ================= */
+#wrapper {
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+}
+#sidebar-wrapper {
+    min-height: 100vh;
+    width: var(--sidebar-width);
+    margin-left: -var(--sidebar-width);
+    transition: margin 0.3s ease;
+    z-index: 1000;
+}
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+#page-content-wrapper {
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -var(--sidebar-width);
+    }
+}
+
+.bg-glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.sidebar .list-group-item {
+    transition: all 0.3s ease;
+    border: none;
+}
+.sidebar .list-group-item:hover, .sidebar .list-group-item.active {
+    background: rgba(79, 70, 229, 0.1) !important;
+    color: var(--primary) !important;
+    transform: translateX(5px);
+}
+
+/* ================= Gradient Navbar ================= */
+.navbar-gradient {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%) !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.2);
+}
+.navbar-gradient .navbar-brand,
+.navbar-gradient .nav-link,
+.navbar-gradient .btn-outline-primary i {
+    color: white !important;
+}
+.navbar-gradient .btn-outline-primary {
+    border-color: rgba(255,255,255,0.4);
+    color: white;
+}
+.navbar-gradient .btn-outline-primary:hover {
+    background: rgba(255,255,255,0.2);
+    border-color: white;
+}
+
+/* ================= UI Elements ================= */
+.card {
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.auth-card {
+    margin-top: 5vh;
+}
+
+.btn {
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border: none;
+    color: white;
+}
+.btn-primary:hover {
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+    transform: translateY(-2px);
+    color: white;
+}
+
+.form-control, .form-select {
+    border-radius: 14px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid var(--border);
+}
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+    border-color: var(--primary);
+}
+
+.auth-icon {
+    width: 60px; height: 60px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px; margin-bottom: 20px;
+    box-shadow: 0 8px 15px rgba(79, 70, 229, 0.3);
+    transform: rotate(-5deg);
+}
+
+.role-pill {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+.role-pill.admin {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+}
+.role-pill.editor {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+}
+
+.stat-card {
+    position: relative;
+    overflow: hidden;
+}
+.stat-card .icon-box {
+    width: 50px; height: 50px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px;
+    background: rgba(79, 70, 229, 0.1);
+    color: var(--primary);
+}
+.stat-card.success .icon-box { background: rgba(16, 185, 129, 0.1); color: var(--success); }
+.stat-card.warning .icon-box { background: rgba(245, 158, 11, 0.1); color: var(--warning); }
+.stat-card.secondary .icon-box { background: rgba(59, 130, 246, 0.1); color: var(--secondary); }
+
+.entry-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border);
+}
+
+mark {
+    background: rgba(245, 158, 11, 0.2);
+    color: var(--warning);
+    border-radius: 4px;
+    padding: 0 4px;
+}

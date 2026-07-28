@@ -1,0 +1,107 @@
+/* ===== Task 2 - Basic clean styling ===== */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6f9;
+    color: #2c3e50;
+}
+
+.navbar {
+    background: #2c3e50;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+}
+
+.nav-brand { font-size: 1.3rem; font-weight: bold; }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+.nav-links li a:hover { color: #1abc9c; }
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.form-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.form-box label { margin-top: 12px; font-weight: 600; }
+.form-box input, .form-box textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-box button, .btn {
+    margin-top: 18px;
+    background: #1abc9c;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+}
+
+.form-box button:hover, .btn:hover { background: #16a085; }
+
+.alert {
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.alert-error { background: #fdecea; color: #c0392b; border: 1px solid #f5b7b1; }
+.alert-success { background: #eafaf1; color: #1e8449; border: 1px solid #a9dfbf; }
+
+.post-list { display: flex; flex-direction: column; gap: 15px; }
+
+.post-card {
+    background: #fff;
+    padding: 18px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.post-card h3 { margin: 0 0 8px; }
+.post-actions { margin-top: 10px; display: flex; gap: 15px; }
+.post-actions a { color: #2980b9; text-decoration: none; font-weight: 600; }
+.post-actions a:hover { text-decoration: underline; }
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #2c3e50;
+    color: #ecf0f1;
+    margin-top: 40px;
+}
